@@ -1,0 +1,99 @@
+/*
+ * Achtung! Источник фашизма и садомазохизма 卍 卍 卍
+ */
+{
+  "extends": "airbnb",
+  // чтобы работало static и проч
+  "parser": "babel-eslint",
+  //чтобы использовать window.*
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    // чтобы не объявлять имена всех анонимных функций
+    "func-names": [
+      "error",
+      "never"
+    ],
+    // чтобы было по 4 оступа
+    "indent": [
+      "error",
+      4
+    ],
+    // туда же
+    "react/jsx-indent": [
+      "error",
+      4
+    ],
+    // туда же
+    "react/jsx-indent-props": [
+      "error",
+      4
+    ],
+    // чтобы не определять типы переменных
+    "react/prop-types": "warn",
+    // выключим обратно, если: https://github.com/yannickcr/eslint-plugin-react/issues/1030
+    // ↑ нежелательно это включать, т.к. тут единственная проверка, что объявлены defaultProps
+    // Там где встречается какой-то вложенный шаблон, в котором нет смысла описывать все параметры,
+    // лучше обернуть его в комменты: /* eslint-disable react/prop-types */ и /* eslint-enable react/prop-types */
+    // чтобы динамически подключать бандлы
+    "global-require": "off",
+    // динамические имена бандлов
+    "import/no-dynamic-require": "off",
+    // отключаем ругань на алиасы - проверку существования модулей
+    // все равно при раскатке на jenkins отсутствие быстро выявится
+    "import/no-unresolved": "off",
+    // это проверка, что кто-то забыл добавить новый модуль в package.json
+    "import/no-extraneous-dependencies": "off",
+    // расширения алиасов
+    "import/extensions": "off",
+    // 'array', 'object' - нужные нам типы props
+    "react/forbid-prop-types": [
+      "error",
+      {
+        "forbid": [
+          "any"
+        ]
+      }
+    ],
+    // несколько компонентов в 1 файле
+    "react/no-multi-comp": "off",
+    // туда же
+    "react/prefer-stateless-function": "warn",
+    // на всякий случай
+    "camelcase": 1,
+    // неудобно без цифровых ключей
+    "react/no-array-index-key": "off",
+    // чтобы не было лишних пустых строк
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 1
+      }
+    ],
+    // методы, которые не нужно предлагать сделать static, ❤ backbone ❤
+    "class-methods-use-this": "off",
+    // ругань на ++ уже лишнее
+    "no-plusplus": "off",
+    // var или let/const - вот в чем вопрос?
+    "no-var": "off",
+    // ругается на onClick={bind...}
+    "react/jsx-no-bind": "off",
+    // чтобы не проверял alt у картинок
+    "jsx-a11y/img-has-alt": "off",
+    // конкатенация строк
+    "prefer-template": "warn",
+    // чтобы не было ругани на переопределение параметров метода
+    "no-param-reassign": "warn",
+    // чтобы не ругался на отсутствие скобок вокруг аргументов стрелочных функций
+    "arrow-parens": "off",
+    // чтобы пропускал ...arguments, потому что обычный rest-params обходит все циклом
+    "prefer-rest-params": "warn",
+    // чтобы не ругался на функции, начинающиеся с _ в actions
+    "no-underscore-dangle": "warn",
+    // чтобы не забывали удалять за собой
+    "no-console": "error"
+  }
+}

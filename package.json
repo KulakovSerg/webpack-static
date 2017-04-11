@@ -1,0 +1,60 @@
+{
+  "name": "webpack-react-static-generator-sample",
+  "version": "0.0.0",
+  "description": "Webpack react static generator sample",
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p"
+  },
+  "author": "Kulakov Serge",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "babel-core": "^6.7.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.6.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.6.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-runtime": "^6.6.1",
+    "css-loader": "0.28.0",
+    "es6-promise": "^4.1.0",
+    "eslint": "^3.10.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.7.1",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.24.1",
+    "immutable": "^3.8.1",
+    "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^4.5.2",
+    "postcss-loader": "^1.1.1",
+    "prepush": "^3.1.11",
+    "react": "^15.5.3",
+    "react-dom": "^15.4.0",
+    "react-to-html-webpack-plugin": "^2.2.0",
+    "redux": "^3.3.1",
+    "redux-thunk": "^2.0.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.2.1"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-1"
+    ]
+  }
+}
